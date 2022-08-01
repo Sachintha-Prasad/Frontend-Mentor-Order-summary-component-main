@@ -113,11 +113,11 @@ body {
   margin-bottom: 1em;
   box-shadow: 0 1rem 1rem 0.1rem hsla(245deg, 75%, 52%, 0.226);
   width: 100%;
-  padding: 1em 2em;
+  padding: 1.5em 2em;
   border-radius: 0.8rem;
   color: hsl(225deg, 100%, 94%);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 900;
   transition: 0.2s linear;
   cursor: pointer;
 }
