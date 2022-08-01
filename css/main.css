@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(225deg, 100%, 94%);
+  background-image: url("/images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw 60vh;
+  background-position: top;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url("/images/pattern-background-mobile.svg");
+  }
+}
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(80%, 35rem);
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.container .hero-img {
+  width: 100%;
+}
+.container article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2em;
+}
+.container article .title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: hsl(223deg, 47%, 23%);
+}
+.container article .description {
+  font-size: 1.3rem;
+  text-align: center;
+  color: hsl(224deg, 23%, 55%);
+  width: min(90%, 24rem);
+}
+.container article .plan-price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5em 2em;
+  border-radius: 1rem;
+  background-color: hsla(225deg, 100%, 94%, 0.377);
+}
+.container article .plan-price-container .plan-price-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.container article .plan-price-container .plan-price-icon img {
+  width: min(100%, 4rem);
+}
+.container article .plan-price-container .plan-price-icon .plan {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: hsl(223deg, 47%, 23%);
+}
+.container article .plan-price-container .plan-price-icon .price {
+  color: hsl(224deg, 23%, 55%);
+}
+.container article .plan-price-container .change-btn {
+  background: transparent;
+  color: hsl(245deg, 75%, 52%);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.container article .plan-price-container .change-btn:hover {
+  color: hsl(224deg, 23%, 55%);
+  text-decoration: none;
+}
+.container article .payment-btn {
+  background-color: hsl(245deg, 75%, 52%);
+  margin-bottom: 1em;
+  box-shadow: 0 1rem 1rem 0.1rem hsla(245deg, 75%, 52%, 0.226);
+  width: 100%;
+  padding: 1em 2em;
+  border-radius: 0.8rem;
+  color: hsl(225deg, 100%, 94%);
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.container article .payment-btn:hover {
+  background-color: hsl(224deg, 23%, 55%);
+  color: hsl(225deg, 100%, 94%);
+}
+.container article .cancel-btn {
+  background-color: transparent;
+  margin-bottom: 1.5em;
+  color: hsl(224deg, 23%, 55%);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.container article .cancel-btn:hover {
+  color: hsl(223deg, 47%, 23%);
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,181 @@
+// google font link 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+// variable 
+
+    // font 
+        $main-font: 'Red Hat Display', sans-serif;
+
+    // colors
+
+    // Primary
+        $Pale-blue: hsl(225, 100%, 94%);
+        $Bright-blue: hsl(245, 75%, 52%);
+
+    // Neutral
+        $Very-pale-blue: hsl(225, 100%, 98%);
+        $Desaturated-blue: hsl(224, 23%, 55%);
+        $Dark-blue: hsl(223, 47%, 23%);
+
+// mixin
+    @mixin flex($dir, $al-it, $ju-co) {
+        display: flex;
+        flex-direction: $dir;
+        align-items: $al-it;
+        justify-content: $ju-co;
+    }
+
+// reset 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+
+    background-color: $Pale-blue;
+    background-image: url('/images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 100vw 60vh;
+    background-position: top;
+
+
+    font-family: $main-font;
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url('/images/pattern-background-mobile.svg');
+    }
+}
+
+
+// content 
+
+body {
+    @include flex(row, center, center);
+}
+
+.container {
+    @include flex(column, center, center);
+    
+    width: min(80%, 35rem);
+    
+    background-color: $Very-pale-blue;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .hero-img {
+        width: min(100%);
+    }
+
+    & article {
+        @include flex(column, center, center);
+        gap: 2rem;
+        
+        padding: 2em;
+        
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: $Dark-blue;
+        }
+
+        .description {
+            font-size: 1.3rem;
+            text-align: center;
+            color: $Desaturated-blue;
+
+            width: min(90%, 24rem)
+        }
+        
+        .plan-price-container {
+            @include flex(row, center, space-between);
+            gap: 1rem;
+            
+            width: 100%;
+            padding: 1.5em 2em;
+            border-radius: 1rem;
+            background-color: hsla(225, 100%, 94%, 0.377);
+            
+            .plan-price-icon {
+                @include flex(row, center, space-between);
+                gap: 1rem;
+
+                & img {
+                    width: min(100%, 4rem);
+                }
+
+                .plan {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    margin-bottom: .2rem;
+                    color: $Dark-blue;
+                }
+
+                .price {
+                    color: $Desaturated-blue;
+                } 
+            }
+
+            .change-btn {
+                background: transparent;
+                color: $Bright-blue;
+                font-size: 1.1rem;
+                font-weight: 700;
+                text-decoration: underline;
+                transition: .2s linear;
+                cursor: pointer;
+            }
+
+            .change-btn:hover {
+                color: $Desaturated-blue;
+                text-decoration: none;
+            }
+
+        }
+
+        .payment-btn {
+            background-color: $Bright-blue;
+            margin-bottom: 1em;
+            box-shadow: 0 1rem 1rem .1rem hsla(245, 75%, 52%, 0.226);
+            width: 100%;
+            padding: 1em 2em;
+            border-radius: .8rem;
+            color: $Pale-blue;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: .2s linear;
+            cursor: pointer;
+        }
+
+        .payment-btn:hover {
+            background-color: $Desaturated-blue;
+            color: $Pale-blue;
+        }
+        
+        .cancel-btn {
+            background-color: transparent;
+            margin-bottom: 1.5em;
+            color: $Desaturated-blue;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: .2s linear;
+            cursor: pointer;
+        }
+
+        .cancel-btn:hover {
+            color: $Dark-blue;
+        }
+    }
+}
