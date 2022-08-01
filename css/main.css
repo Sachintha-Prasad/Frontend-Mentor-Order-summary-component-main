@@ -42,6 +42,7 @@ body {
   background-color: hsl(225deg, 100%, 98%);
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 0 1rem 5rem 0.1rem hsla(224deg, 23%, 55%, 0.651);
 }
 .container .hero-img {
   width: 100%;
